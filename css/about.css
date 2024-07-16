@@ -1,0 +1,53 @@
+/* About Section Styling */
+.content {
+    margin-top: 20px; /* Adjust for the fixed header height */
+    background-color: #383838;
+}
+.about-section .intro {
+    margin-top: 20px;
+}
+
+.about-section {
+    width: 100%; /* Adjust width of each section */
+    margin-top: 20px;
+    margin-bottom: 20px; /* Space between sections */
+    background-color: #666666;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left; /* Center align content within sections */
+}
+
+.about-section h2 {
+    text-align: left;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #dcdcdc;
+}
+
+.about-section p {
+    font-size: 24px;
+    line-height: 1.8;
+    color: #dcdcdc;
+}
+
+.about-section ul {
+    font-size: 24px;
+    list-style: disc;
+    padding-left: 20px;
+    color: #dcdcdc;
+}
+
+.container2 {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Ensure sections stack vertically */
+    align-items: center; /* Center align sections horizontally */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .about-section {
+        width: 95%; /* Adjust width on smaller screens */
+    }
+}

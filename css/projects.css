@@ -1,0 +1,77 @@
+/* Projects Section Styling */
+.projects {
+    background-color: #383838;
+    padding: 50px 0;
+    color: #dcdcdc;
+    text-align: center;
+}
+
+.projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.projects h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0170b6;
+}
+
+.project-list {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Ensure sections stack vertically */
+    align-items: center; /* Center align sections horizontally */
+    gap: 20px;
+}
+
+.project-item {
+    background-color: #666666;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    box-sizing: border-box;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-item h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #fdfdfd;
+}
+
+.project-item p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #dcdcdc;
+}
+
+.project-item .btn {
+    align-self: center;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0170b6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-item .btn:hover {
+    background-color: #004f64;
+    transform: translateY(-2px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .project-item {
+        width: 95%;
+    }
+}

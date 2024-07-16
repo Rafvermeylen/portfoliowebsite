@@ -1,0 +1,230 @@
+/* Intro Section Styling */
+.intro {
+    background-color: #383838;
+    padding: 100px 0 50px;
+}
+
+.intro-text {
+    max-width: 70%;
+    text-align: left;
+}
+
+.intro-text h1 {
+    font-size: 48px;
+    color: #fff;
+    animation: fadeInDown 1s ease;
+}
+
+.intro-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #0170b6;
+    animation: fadeInDown 1.2s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    background-color: #2b2b2b;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+
+.intro-text p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #dcdcdc;
+    animation: fadeInDown 1.4s ease;
+}
+
+.intro-image img {
+    width: 300px;
+    height: 560px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    animation: fadeInUp 1s ease;
+}
+
+.intro-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Section Styling */
+.about {
+    background-color: #4b4b4b;
+    padding: 50px 0;
+}
+
+.about .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #dcdcdc;
+    max-width: 600px;
+}
+
+/* Skills Section Styling */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.skill {
+    background-color: #666666;
+    border-radius: 15px;
+    width: calc(33.333% - 60px); /* Adjusted for the gap */
+    text-align: center;
+}
+
+.skill h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #fdfdfd;
+}
+
+/* Circular progress bars */
+.circular-progress {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: conic-gradient(#0170b6 var(--progress), #2b2b2b 0deg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.circular-progress::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #2b2b2b;
+    border-radius: 50%;
+}
+
+.progress-value {
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Services Section Styling */
+.services {
+    background-color: #383838;
+    padding: 50px 0;
+}
+
+.services .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 40px;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    gap: 20px;
+    row-gap: 0;
+}
+
+.service {
+    background-color: #666666;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.service h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.service p {
+    color: #dcdcdc;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .intro .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text, .intro-image {
+        max-width: 100%;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .services .service {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+}
