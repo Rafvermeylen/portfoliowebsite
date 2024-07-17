@@ -228,3 +228,7 @@ body {
         width: 90%;
     }
 }
+
+nav ul li.active a {
+    color: #0170b6;
+}

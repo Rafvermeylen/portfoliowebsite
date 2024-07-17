@@ -47,6 +47,6 @@ function generateBreadcrumbs(currentPage) {
 }
 
 // Load header
-fetchAndInsert('./header.html', 'header-placeholder');
+fetchAndInsert('/html/header.html', 'header-placeholder');
 // Load footer
-fetchAndInsert('./footer.html', 'footer-placeholder');
+fetchAndInsert('/html/footer.html', 'footer-placeholder');
