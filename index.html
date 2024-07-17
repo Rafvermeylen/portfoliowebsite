@@ -7,12 +7,32 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../js/main.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body>
-<!-- Include header -->
-<header id="header-placeholder"></header>
+<header>
+    <div class="container">
+        <div class="logo">Raf Vermeylen</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-page="index">Home</a></li>
+                <li><a href="html/about.html" data-page="about">About Me</a></li>
+                <li class="dropdown">
+                    <a href="html/projects.html" class="dropbtn" data-page="projects">Projects</a>
+                    <div class="dropdown-content">
+                        <a href="html/project1.html">G.R.E.T.A.</a>
+                        <a href="html/project2.html">Project Two</a>
+                        <a href="html/project3.html">Project Three</a>
+                    </div>
+                </li>
+                <li><a href="html/experience.html" data-page="experience">Experience</a></li>
+                <li><a href="html/contact.html" data-page="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn">Download CV</a>
+    </div>
+</header>
 
 <section class="intro">
     <div class="container">
@@ -23,10 +43,10 @@
                 also hold a graduate degree in Internet of Things. I am passionate about technology, fitness, and
                 spending time with friends. I am proud of my achievements so far and am eager to continue learning and
                 growing in my field.</p>
-            <a href="./contact.html" class="btn">Hire Me!</a>
+            <a href="html/contact.html" class="btn">Hire Me!</a>
         </div>
         <div class="intro-image">
-            <img src="../img/Raf/74f6931c-70dc-4796-9e38-8db435486bf9.jpg" alt="Raf Vermeylen">
+            <img src="img/Raf/74f6931c-70dc-4796-9e38-8db435486bf9.jpg" alt="Raf Vermeylen">
         </div>
     </div>
 </section>
@@ -88,7 +108,7 @@
             </div>
         </div>
         <p>If you would like to know more about me, please feel free to look over here.</p>
-        <a href="./about.html" class="btn">About me</a>
+        <a href="html/about.html" class="btn">About me</a>
     </div>
 </section>
 
@@ -132,8 +152,16 @@
         </div>
     </div>
 </section>
-
-<!-- Include footer -->
-<footer id="footer-placeholder"></footer>
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Raf Vermeylen. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/raf-vermeylen-5768a1224/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-gitlab"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
