@@ -44,10 +44,6 @@ body {
     animation: fadeInUp 1s ease;
 }
 
-.intro-image img:hover {
-    transform: scale(1.05);
-}
-
 /* Animations */
 @keyframes fadeInDown {
     from {
