@@ -37,7 +37,7 @@ header {
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: bold;
     color: #dcdcdc;
 }
@@ -57,7 +57,7 @@ nav ul li a {
     color: #dcdcdc;
     font-weight: bold;
     transition: color 0.3s ease;
-    font-size: 22px;
+    font-size: 16px;
 }
 
 nav ul li a:hover,
@@ -74,7 +74,7 @@ nav ul li a.active,
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 16px;
 }
 
 .btn:hover {
