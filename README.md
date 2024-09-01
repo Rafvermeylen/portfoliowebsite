@@ -1,4 +1,4 @@
-# Project Name
+# Qualigrafia - updated website
 ## Overview
 Welcome to Project Name! This is my first real-world project developed for a client. 
 The primary objective was to redesign and modernize an existing website to enhance its functionality, aesthetics, and overall user experience.
