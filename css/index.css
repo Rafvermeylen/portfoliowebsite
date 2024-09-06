@@ -281,12 +281,13 @@ body {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 480px) {
     .container {
         width: 90%;
     }
+
+    div .intro-image {
+        left: 50%;
+    }
 }
 
-nav ul li.active a {
-    color: #0170b6;
-}

@@ -9,6 +9,14 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
 }
 
+body {
+    background-color: #383838;
+    color: #dcdcdc;
+    line-height: 1.6;
+    padding-top: 80px; /* Adjust for the fixed header height */
+}
+
+
 main:hover {
     transform: translateY(-5px); /* Slight lift on hover */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */

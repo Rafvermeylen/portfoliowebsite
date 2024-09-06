@@ -1,0 +1,58 @@
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+    vertical-align: middle; /* Ensure consistent vertical alignment */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #dcdcdc;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 20px;
+}
+
+nav ul li a:hover,
+nav ul li a.active,
+.dropdown .dropbtn.active {
+    color: #0170b6;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: left;
+    }
+
+    nav ul li a {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        display: none;
+        width: 90%;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        width: 90%;
+        text-align: left;
+        margin: 6px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}

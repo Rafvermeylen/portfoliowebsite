@@ -1,0 +1,33 @@
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #dcdcdc;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #0170b6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #004f64;
+}
+
+/* Push footer to the bottom */
+#footer-placeholder {
+    margin-top: auto;
+}

@@ -3,15 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: poppins;
-}
-
-body {
-    background-color: #1c1c1c;
-    color: #dcdcdc;
-    line-height: 1.6;
-    padding-top: 80px; /* Adjust for the fixed header height */
-
+    font-family: sans-serif;
 }
 
 h2 {
@@ -19,53 +11,20 @@ h2 {
 
 }
 
-/* Header Styling */
-header {
-    background-color: #242424;
-    border-bottom: 1px solid #333;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
 .container {
-    width: 80%;
-    margin: 0 auto;
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative; /* This keeps the header content in place */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .logo {
     font-size: 28px;
     font-weight: bold;
     color: #dcdcdc;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
-    vertical-align: middle; /* Ensure consistent vertical alignment */
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #dcdcdc;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    font-size: 20px;
-}
-
-nav ul li a:hover,
-nav ul li a.active,
-.dropdown .dropbtn.active {
-    color: #0170b6;
 }
 
 .btn {
@@ -84,50 +43,6 @@ nav ul li a.active,
 .btn:hover {
     background-color: #004f64;
     transform: translateY(-2px);
-}
-
-/* Dropdown Styling */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown .dropbtn {
-    padding: 14px 20px;
-    color: white;
-    text-decoration: none;
-    vertical-align: middle; /* Ensure the dropdown button aligns properly */
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 100%; /* Position the dropdown content below the dropdown button */
-    left: 0; /* Ensure dropdown starts from the left edge of the dropdown button */
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #111;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #111;
 }
 
 /* Hamburger Menu */
@@ -149,16 +64,21 @@ nav ul li a.active,
     border-radius: 5px;
 }
 
-#menu-toggle:checked + .hamburger-menu + nav ul {
-    display: flex;
-    flex-direction: column;
+#menu-toggle:checked ~ nav ul {
+    display: block;
+    position: absolute;
+    top: 100%; /* Places the menu below the header */
+    left: 0;
+    width: 100%;
+    background-color: #242424; /* Background color of the dropdown */
+    z-index: 1000; /* Ensure the menu is above other content */
 }
 
 @media (max-width: 768px) {
     .container {
-        width: 95%;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .hamburger-menu {
@@ -167,8 +87,10 @@ nav ul li a.active,
 
     nav ul {
         display: none;
-        width: 100%;
         flex-direction: column;
+        padding: 10px 0;
+        margin: 0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     nav ul li {
@@ -182,41 +104,11 @@ nav ul li a.active,
     }
 
     .btn {
-        width: 100%;
-        text-align: center;
+        display: none; /* Hide the button in responsive view */
     }
 }
 
-/* Footer Styling */
-footer {
-    background-color: #333;
-    color: #dcdcdc;
-    padding: 20px 0;
-    text-align: center;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-}
-
-footer .social-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-footer .social-links a {
-    font-size: 24px;
-    margin: 0 10px;
-    color: #0170b6;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer .social-links a:hover {
-    color: #004f64;
-}
-
-@media (max-width: 576px) {
+@media (max-width: 480px) {
     .container {
         width: 100%;
         padding: 0 10px;
@@ -238,12 +130,16 @@ footer .social-links a:hover {
         width: 100%;
     }
 
-    nav ul li a {
-        font-size: 18px;
-    }
-
     .btn {
         padding: 8px 16px;
         font-size: 14px;
+    }
+
+    section .projects {
+        padding: 0;
+    }
+
+    .projects .container {
+        padding: 0;
     }
 }
