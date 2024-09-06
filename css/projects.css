@@ -93,13 +93,6 @@
     transform: translateY(-3px);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-    .project-list {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
-    }
-}
-
 @media (max-width: 768px) {
     .projects h2 {
         font-size: 32px;
@@ -116,7 +109,25 @@
     }
 
     .project-item .btn {
+        display: inline-block;
         padding: 10px 20px;
         font-size: 14px;
+    }
+
+    .projects {
+        padding: 0;
+    }
+
+    header .btn {
+        display: none;
+    }
+
+    div .project-list {
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px 0;
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
     }
 }

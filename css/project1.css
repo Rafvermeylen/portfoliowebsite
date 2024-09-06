@@ -3,7 +3,7 @@ main {
     padding: 30px; /* Increased padding for more spacious layout */
     max-width: 80%; /* Slightly wider for better content visibility */
     margin: 40px auto; /* Added top margin for breathing space */
-    background-color: #2f2f2f; /* Darker background for improved contrast */
+    background-color: #4b4b4b; /* Darker background for improved contrast */
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
@@ -58,8 +58,6 @@ p {
 
 ul, ol {
     font-size: 18px;
-    margin-bottom: 1.5em;
-    padding-left: 20px;
     color: #dcdcdc;
 }
 

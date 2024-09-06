@@ -12,7 +12,6 @@ footer {
 footer .social-links {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
 }
 
 footer .social-links a {
@@ -30,4 +29,14 @@ footer .social-links a:hover {
 /* Push footer to the bottom */
 #footer-placeholder {
     margin-top: auto;
+}
+
+@media (max-width: 480px) {
+    footer p {
+        font-size: 12px;
+    }
+
+    footer .social-links {
+        font-size: 12px;
+    }
 }

@@ -8,7 +8,7 @@
 
 /* Container Styling */
 .container2 {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -69,6 +69,19 @@
 /* Media Queries */
 @media (max-width: 768px) {
     .about-section {
-        width: 95%; /* Adjust width on smaller screens */
+        width: 90%; /* Adjust width on smaller screens */
     }
 }
+
+/* Media Queries */
+@media (max-width: 480px) {
+    .content {
+        margin-top: 0;
+        padding-bottom: 0;
+    }
+
+    .about-section {
+        width: 90%; /* Adjust width on smaller screens */
+    }
+}
+
