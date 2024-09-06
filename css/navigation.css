@@ -16,10 +16,13 @@ nav ul li a {
     font-size: 20px;
 }
 
-nav ul li a:hover,
-nav ul li a.active,
-.dropdown .dropbtn.active {
+nav ul li a:hover {
     color: #0170b6;
+}
+
+nav ul li a.active, .dropdown .dropbtn.active {
+    color: #0170b6;  /* Ensure the text is readable */
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -36,6 +39,12 @@ nav ul li a.active,
 
     nav ul li a {
         font-size: 28px;
+    }
+
+    nav ul li a.active {
+        background-color: #444; /* Different color in mobile view */
+        color: #fff;
+        padding: 10px 20px; /* Adjust padding for mobile view */
     }
 }
 
@@ -54,5 +63,11 @@ nav ul li a.active,
 
     nav ul li a {
         font-size: 16px;
+    }
+
+    nav ul li a.active {
+        background-color: #444; /* Different color in mobile view */
+        color: #fff;
+        padding: 5px 10px; /* Adjust padding for mobile view */
     }
 }
