@@ -19,7 +19,6 @@ body {
 /* Dropdown Styling */
 .dropdown {
     position: relative;
-    display: inline-block;
 }
 
 .dropdown .dropbtn {
