@@ -51,9 +51,10 @@ h2 {
 }
 
 .hamburger-menu {
-    display: none;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
+    margin-left: auto; /* Pushes the menu to the right */
 }
 
 .hamburger-menu span {
@@ -67,9 +68,10 @@ h2 {
 #menu-toggle:checked ~ nav ul {
     display: block;
     position: absolute;
+    padding: 10px 0;
     top: 100%; /* Places the menu below the header */
-    left: 0;
-    width: 100%;
+    right: 0; /* Aligns the dropdown to the right side */
+    width: 100px; /* The dropdown width adjusts to content */
     background-color: #242424; /* Background color of the dropdown */
     z-index: 1000; /* Ensure the menu is above other content */
 }
