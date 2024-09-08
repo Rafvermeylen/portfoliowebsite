@@ -65,6 +65,23 @@ ul li, ol li {
     margin-bottom: 0.8em;
 }
 
+/* Style for unvisited links */
+p a:link {
+    color: #1e90ff; /* Regular link color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Style for visited links */
+p a:visited {
+    color: #1e90ff; /* Color for links that have been clicked */
+}
+
+/* Style for links on hover */
+p a:hover {
+    color: #0155b9; /* Color when the mouse hovers over the link */
+    text-decoration: underline; /* Underline on hover */
+}
+
 /* Gallery Section */
 .gallery {
     display: flex;
