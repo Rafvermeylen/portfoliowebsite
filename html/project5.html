@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raf Vermeylen - Parchís Board Game</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/project1.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">Raf Vermeylen</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="../index.html" data-page="index">Home</a></li>
+                <li><a href="about.html" data-page="about">About Me</a></li>
+                <li class="dropdown">
+                    <a href="./projects.html" class="dropbtn" data-page="projects">Projects</a>
+                    <div class="dropdown-content">
+                        <a href="./project1.html">G.R.E.T.A.</a>
+                        <a href="./project2.html">Project Two</a>
+                        <a href="./project3.html">Project Three</a>
+                        <a href="./project4.html">Pokémon Battle App</a>
+                        <a href="./project5.html" class="active">Parchís board game</a>
+                    </div>
+                </li>
+                <li><a href="./experience.html" data-page="experience">Experience</a></li>
+                <li><a href="./contact.html" data-page="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn">Download CV</a>
+    </div>
+</header>
+<main>
+    <section>
+        <h1>Parchís Board Game</h1>
+        <h2>Introduction</h2>
+        <p>Parchís is a classic board game played with dice and tokens, suitable for up to four players. The objective is to move all four tokens from the starting "nest" around the board and into the colored "home stretch" as quickly as possible. This project involves developing a JavaFX program to digitize the game, enforcing the rules, and providing a graphical interface for gameplay.</p>
+
+        <h2>Project Overview</h2>
+        <p>This project entails creating a JavaFX application for the Parchís board game. Players can roll dice, move tokens, and interact with the game based on the defined rules. The application features game rule enforcement, visual representation of the game board, and a scoring system to track player performance.</p>
+
+        <h2>Objectives</h2>
+        <p>The key objectives of the Parchís Board Game project are:</p>
+        <ul>
+            <li><strong>Game Rule Implementation:</strong> To enforce the rules of Parchís, including token movement, dice rolls, and special game events.</li>
+            <li><strong>Graphical User Interface:</strong> To provide a clear and interactive visual representation of the game board and player actions.</li>
+            <li><strong>Score Tracking:</strong> To record and display player scores, including turn count and game completion times.</li>
+        </ul>
+
+        <h2>Technology Stack</h2>
+        <p>The project utilizes the following technologies:</p>
+        <ul>
+            <li><strong>JavaFX:</strong> For developing the graphical user interface and handling game interactions.</li>
+            <li><strong>Java:</strong> For implementing the game logic and rule enforcement.</li>
+        </ul>
+
+        <h2>Program Requirements</h2>
+        <p>The application must fulfill the following requirements:</p>
+        <ul>
+            <li>Enforce all game rules as described.</li>
+            <li>Provide a clear graphical visualization of the game board, player turns, dice results, and applied rules.</li>
+            <li>Record the winner's name and number of turns in a text file once the game is completed.</li>
+        </ul>
+
+        <h2>Possible Extensions</h2>
+        <p>Future enhancements could include:</p>
+        <ul>
+            <li>Implementing an AI opponent for solo play.</li>
+            <li>Adding customizable game settings and player options.</li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Raf Vermeylen. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/raf-vermeylen-5768a1224/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/Rafvermeylen"><i class="fa fa-github"></i></a>
+            <a href="https://gitlab.com/Rafvermeylen"><i class="fa fa-gitlab"></i></a>
+            <a href="mailto:raf.vermeylen1@gmail.com"><i class="fa fa-envelope"></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
