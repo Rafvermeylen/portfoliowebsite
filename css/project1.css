@@ -18,7 +18,6 @@ body {
 
 
 main:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
 }
 
@@ -115,6 +114,10 @@ p a:hover {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for visual separation */
+}
+
+.objective, .technology, .project, .challenge, .impact, .projectintro, .overview {
+    margin-bottom: 50px;
 }
 
 /* Responsive Adjustments */
