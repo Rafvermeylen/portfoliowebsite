@@ -122,7 +122,7 @@ body {
 
 #carousel-slide {
     display: flex;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     width: 100%; /* Adjust this to fit all slides in one row */
 }
 
@@ -141,7 +141,7 @@ body {
     text-align: center;
     color: #ffffff;
     flex-shrink: 0;
-    width: calc(100% / 3 - 20px); /* Adjust this to ensure 3 slides fit nicely */
+    width: calc(100% / 3 - 20px); /* Ensure 3 slides fit */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
@@ -154,6 +154,7 @@ body {
     margin-block: auto;
 }
 
+
 #prevBtn, #nextBtn {
     position: absolute;
     top: 50%;
@@ -164,9 +165,8 @@ body {
     font-size: 18px;
     cursor: pointer;
     padding: 10px;
-    z-index: 1; /* Ensures the buttons are above the track */
-    margin-left: 10px;
-    margin-right: 10px;
+    z-index: 1;
+    margin: 0 10px;
 }
 
 #prevBtn {
@@ -194,6 +194,7 @@ body {
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
+    transition: background-color 0.5s ease-in-out; /* Smooth transition for indicator color */
 }
 
 .indicator.active {
@@ -303,6 +304,23 @@ body {
     .btn {
         display: inline-block;
     }
+
+    .skills-carousel {
+        width: 100%;
+    }
+
+    #carousel-slide {
+        width: 100%; /* Ensure it fits one slide at a time */
+    }
+
+    .skill {
+        width: 100%;
+    }
+
+    .skill img {
+        max-width: 150px;
+        max-height: 150px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -326,5 +344,22 @@ body {
 
     .btn {
         display: inline-block;
+    }
+
+    .skills-carousel {
+        width: 90%;
+    }
+
+    #carousel-slide {
+        width: 90%; /* Ensure it fits one slide at a time */
+    }
+
+    .skill {
+        width: 90%;
+    }
+
+    .skill img {
+        max-width: 100px;
+        max-height: 100px;
     }
 }
