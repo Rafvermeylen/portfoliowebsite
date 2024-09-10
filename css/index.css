@@ -111,25 +111,25 @@ body {
     text-align: center;
 }
 
-/* Skills Carousel Styling */
+/* CSS for Carousel */
 .skills-carousel {
     position: relative;
     overflow: hidden;
-    width: 60%;  /* Adjust to fit 3 items nicely */
+    width: 60%;
     background-color: #4b4b4b;
     margin: 0 auto;
 }
 
-#carousel-track {
+#carousel-slide {
     display: flex;
     transition: transform 0.3s ease-in-out;
-    width: calc(100% * 3);  /* Adjust based on the number of slides shown at once */
+    width: 100%; /* Adjust this to fit all slides in one row */
 }
 
 .carousel-slide {
     display: flex;
     flex-shrink: 0;
-    width: 100%;  /* Adjust this to fit the number of slides */
+    width: calc(100% / 3); /* Adjust this to fit the number of slides */
 }
 
 .skill {
@@ -141,7 +141,7 @@ body {
     text-align: center;
     color: #ffffff;
     flex-shrink: 0;
-    width: calc(100% / 3 - 20px);  /* Adjust this to ensure 3 slides fit nicely */
+    width: calc(100% / 3 - 20px); /* Adjust this to ensure 3 slides fit nicely */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
@@ -181,6 +181,24 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #0170b6;
+}
 
 /* Services Section Styling */
 .services {
@@ -295,6 +313,11 @@ body {
     .skill {
         width: 100%;
         margin: 0 0
+    }
+
+    .skill img {
+        max-width: 100px;
+        max-height: 100px;
     }
 
     header .btn {

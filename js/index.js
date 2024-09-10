@@ -1,74 +1,78 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const currentPage = window.location.pathname.split("/").pop().split(".")[0]; // Gets the current page name without extension
-    const navLinks = document.querySelectorAll('nav ul li a');
-
-    navLinks.forEach(link => {
-        const page = link.getAttribute('data-page');
-        if (page === currentPage) {
-            link.parentElement.classList.add('active');
-        }
-    });
-});
-
 document.addEventListener('DOMContentLoaded', () => {
     const track = document.getElementById('carousel-slide');
-    if (!track) {
-        console.error("No element found with the class '.carousel-slide'");
+    const indicatorContainer = document.querySelector('.carousel-indicators');
+
+    if (!track || !indicatorContainer) {
+        console.error("Track or Indicator container not found");
         return;
     }
-    console.log("track: ", track)
 
     const slides = Array.from(track.children);
-    console.log(Array.from(track.children));
     const prevButton = document.querySelector('#prevBtn');
     const nextButton = document.querySelector('#nextBtn');
-    const visibleSlides = 3; // Number of visible slides
-    const slideWidth = slides[0].getBoundingClientRect().width;
+    const visibleSlides = 3;  // Number of visible slides at a time
+    const slideWidth = slides[0].getBoundingClientRect().width + 20;  // Add 20 for margin/padding if needed
     const totalSlides = slides.length;
-    const maxIndex = totalSlides - visibleSlides;
+    const totalPages = Math.ceil(totalSlides / visibleSlides);  // Calculate number of pages
 
     let currentIndex = 0;
-    console.log('children:', slides);
 
-    // Function to move the track to the correct position
+    // Create indicators dynamically based on total pages
+    const createIndicators = () => {
+        indicatorContainer.innerHTML = '';  // Clear existing indicators
+        for (let i = 0; i < totalPages; i++) {
+            const indicator = document.createElement('div');
+            indicator.classList.add('indicator');
+            if (i === 0) indicator.classList.add('active');  // Set the first indicator as active
+            indicatorContainer.appendChild(indicator);
+        }
+    };
+
+    createIndicators();
+
+    const indicators = document.querySelectorAll('.carousel-indicators .indicator');
+
+    // Function to move to the correct slide
     const moveToSlide = (index) => {
         const offset = -(index * slideWidth);
-        console.log('Moving to slide:', index, 'Offset:', offset);
         track.style.transform = `translateX(${offset}px)`;
     };
 
-    // Previous Button functionality
-    prevButton.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            moveToSlide(currentIndex);
-            console.log('Prev Button Clicked, Current Index:', currentIndex);
-        } else {
-            console.log('Already at the first slide');
-        }
-    });
+    // Function to update indicators based on the current index
+    const updateIndicators = () => {
+        const currentPage = Math.floor(currentIndex / visibleSlides);
+        indicators.forEach((indicator, index) => {
+            if (index === currentPage) {
+                indicator.classList.add('active');
+            } else {
+                indicator.classList.remove('active');
+            }
+        });
+    };
 
     // Next Button functionality
     nextButton.addEventListener('click', () => {
-        // Adjusted logic: Ensure currentIndex is below maxIndex
-        if (currentIndex < maxIndex) {
-            currentIndex++;
-            moveToSlide(currentIndex);
-            console.log('Next Button Clicked, Current Index:', currentIndex);
+        if (currentIndex + visibleSlides < totalSlides) {
+            currentIndex += visibleSlides;
         } else {
-            console.log('Already at the last slide');
+            currentIndex = 0;  // Reset to the beginning
         }
+        moveToSlide(currentIndex);
+        updateIndicators();
     });
 
-    // Arrow Key Controls
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'ArrowLeft') {
-            prevButton.click();
-        } else if (event.key === 'ArrowRight') {
-            nextButton.click();
+    // Previous Button functionality
+    prevButton.addEventListener('click', () => {
+        if (currentIndex - visibleSlides >= 0) {
+            currentIndex -= visibleSlides;
+        } else {
+            currentIndex = (totalPages - 1) * visibleSlides;  // Go to the end
         }
+        moveToSlide(currentIndex);
+        updateIndicators();
     });
 
-    // Initialize position
+    // Initialize the carousel and indicators
     moveToSlide(currentIndex);
+    updateIndicators();
 });
