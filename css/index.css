@@ -111,73 +111,76 @@ body {
     text-align: center;
 }
 
-/* Skills Section Styling */
-.skills {
+/* Skills Carousel Styling */
+.skills-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 60%;  /* Adjust to fit 3 items nicely */
+    background-color: #4b4b4b;
+    margin: 0 auto;
+}
+
+#carousel-track {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
+    transition: transform 0.3s ease-in-out;
+    width: calc(100% * 3);  /* Adjust based on the number of slides shown at once */
+}
+
+.carousel-slide {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;  /* Adjust this to fit the number of slides */
 }
 
 .skill {
     background-color: #666666;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 20px;
-    width: calc(33.333% - 40px); /* Adjusted for the gap */
+    margin: 0 10px;
+    font-size: 16px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.skill:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.skill h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #fdfdfd;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Circular Progress Bars */
-.circular-progress {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    background: conic-gradient(#0170b6 var(--progress), #2b2b2b 0deg);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 15px auto;
-    transition: transform 0.3s ease;
-}
-
-.circular-progress::before {
-    content: '';
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: #2b2b2b;
-    border-radius: 50%;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.circular-progress:hover {
-    transform: scale(1.1);
-}
-
-.progress-value {
-    position: relative;
-    font-size: 20px;
     color: #ffffff;
-    font-weight: bold;
-    z-index: 1;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+    width: calc(100% / 3 - 20px);  /* Adjust this to ensure 3 slides fit nicely */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.skill img {
+    max-height: 200px;
+    max-width: 200px;
+    margin-block: auto;
+}
+
+#prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1; /* Ensures the buttons are above the track */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 
 /* Services Section Styling */
 .services {
@@ -291,6 +294,7 @@ body {
 
     .skill {
         width: 100%;
+        margin: 0 0
     }
 
     header .btn {

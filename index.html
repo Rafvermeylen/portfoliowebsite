@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
     <script src="js/main.js"></script>
     <script src="js/index.js"></script>
 </head>
@@ -63,91 +64,41 @@
         <p>With a passion for systems and networking, I have honed my skills through years of dedicated experience. I
             strive to deliver efficient and effective solutions that enhance connectivity and performance. I am
             constantly seeking new challenges and opportunities to expand my knowledge and expertise.</p>
-        <div class="skills">
-            <div class="skill">
-                <div class="circular-progress" style="--progress: 70;" data-progress="70">
-                    <span class="progress-value">70%</span>
+        <div class="skills-carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide" id="carousel-slide">
+                    <div class="skill">
+                        <img src="./img/git.png" alt="git.png"></div>
+                    <div class="skill">
+                        <img src="./img/html.png" alt="git.png"></div>
+                    <div class="skill">
+                        <img src="./img/css.png" alt="git.png"></div>
+                    <div class="skill">
+                        <img src="./img/js.png" alt="git.png"></div>
+                    <div class="skill">
+                        <img src="./img/linux.png" alt="git.png"></div>
+                    <div class="skill">
+                        <img src="./img/windows.png" alt="git.png"></div>
+                    <div class="skill">
+                        <img src="./img/bash.png" alt="git.png"></div>
+                    <div class="skill">
+                        <img src="./img/pws.png" alt="git.png"></div>
+                    <div class="skill">
+                        <img src="./img/gcloud.png" alt="git.png"></div>
+                    <div class="skill">
+                        <img src="./img/java.png" alt="git.png"></div>
+                    <div class="skill">
+                        <img src="./img/C.png" alt="git.png"></div>
+                    <div class="skill">
+                        <img src="./img/C%23.png" alt="git.png"></div>
+                    <div class="skill">
+                        <img src="./img/python.png" alt="git.png"></div>
+                    <div class="skill">
+                        <img src="./img/sql.png" alt="git.png"></div>
                 </div>
-                <p>Git</p>
             </div>
-            <div class="skill">
-                <div class="circular-progress" style="--progress: 80;" data-progress="80">
-                    <span class="progress-value">80%</span>
-                </div>
-                <p>HTML</p>
-            </div>
-            <div class="skill">
-                <div class="circular-progress" style="--progress: 65;" data-progress="65">
-                    <span class="progress-value">65%</span>
-                </div>
-                <p>CSS</p>
-            </div>
-            <div class="skill">
-                <div class="circular-progress" style="--progress: 50;" data-progress="50">
-                    <span class="progress-value">50%</span>
-                </div>
-                <p>JavaScript</p>
-            </div>
-            <div class="skill">
-                <div class="circular-progress" style="--progress: 85;" data-progress="85">
-                    <span class="progress-value">85%</span>
-                </div>
-                <p>Linux</p>
-            </div>
-            <div class="skill">
-                <div class="circular-progress" style="--progress: 85;" data-progress="85">
-                    <span class="progress-value">85%</span>
-                </div>
-                <p>Windows</p>
-            </div>
-            <div class="skill">
-                <div class="circular-progress" style="--progress: 80;" data-progress="80">
-                    <span class="progress-value">80%</span>
-                </div>
-                <p>Bash</p>
-            </div>
-            <div class="skill">
-                <div class="circular-progress" style="--progress: 70;" data-progress="70">
-                    <span class="progress-value">70%</span>
-                </div>
-                <p>Powershell</p>
-            </div>
-            <div class="skill">
-                <div class="circular-progress" style="--progress: 70;" data-progress="70">
-                    <span class="progress-value">70%</span>
-                </div>
-                <p>Google Cloud</p>
-            </div>
-            <div class="skill">
-                <div class="circular-progress" style="--progress: 75;" data-progress="75">
-                    <span class="progress-value">75%</span>
-                </div>
-                <p>Java</p>
-            </div>
-            <div class="skill">
-                <div class="circular-progress" style="--progress: 60;" data-progress="60">
-                    <span class="progress-value">60%</span>
-                </div>
-                <p>C</p>
-            </div>
-            <div class="skill">
-                <div class="circular-progress" style="--progress: 70;" data-progress="70">
-                    <span class="progress-value">70%</span>
-                </div>
-                <p>C#</p>
-            </div>
-            <div class="skill">
-                <div class="circular-progress" style="--progress: 75;" data-progress="75">
-                    <span class="progress-value">75%</span>
-                </div>
-                <p>Python</p>
-            </div>
-            <div class="skill">
-                <div class="circular-progress" style="--progress: 70;" data-progress="70">
-                    <span class="progress-value">70%</span>
-                </div>
-                <p>SQL</p>
-            </div>
+            <button id="prevBtn">&#10094;</button>
+            <button id="nextBtn">&#10095;</button>
         </div>
         <p>If you would like to know more about me, please feel free to look over here.</p>
         <a href="html/about.html" class="btn">About me</a>
@@ -160,31 +111,38 @@
         <div class="service-list">
             <div class="service">
                 <h3>Network Design and Planning</h3>
-                <p>Crafting scalable and resilient network architectures tailored to the unique requirements of businesses and organizations.</p>
+                <p>Crafting scalable and resilient network architectures tailored to the unique requirements of
+                    businesses and organizations.</p>
             </div>
             <div class="service">
                 <h3>Network Implementation and Configuration</h3>
-                <p>Deploying and configuring network infrastructures to ensure peak performance, security, and reliability.</p>
+                <p>Deploying and configuring network infrastructures to ensure peak performance, security, and
+                    reliability.</p>
             </div>
             <div class="service">
                 <h3>Automation and Scripting</h3>
-                <p>Streamlining repetitive tasks through automation, enhancing efficiency and minimizing human error.</p>
+                <p>Streamlining repetitive tasks through automation, enhancing efficiency and minimizing human
+                    error.</p>
             </div>
             <div class="service">
                 <h3>Network Monitoring and Troubleshooting</h3>
-                <p>Continuously monitoring network health and swiftly addressing issues to maintain optimal uptime and connectivity.</p>
+                <p>Continuously monitoring network health and swiftly addressing issues to maintain optimal uptime and
+                    connectivity.</p>
             </div>
             <div class="service">
                 <h3>Cloud Solutions Integration</h3>
-                <p>Leveraging cloud technologies to provide scalable, flexible, and cost-effective solutions for modern enterprises.</p>
+                <p>Leveraging cloud technologies to provide scalable, flexible, and cost-effective solutions for modern
+                    enterprises.</p>
             </div>
             <div class="service">
                 <h3>Virtualization</h3>
-                <p>Employing virtualization to maximize resource utilization, increase efficiency, and reduce hardware dependencies.</p>
+                <p>Employing virtualization to maximize resource utilization, increase efficiency, and reduce hardware
+                    dependencies.</p>
             </div>
             <div class="service">
                 <h3>Network Security</h3>
-                <p>Implementing advanced security protocols to safeguard network infrastructure against potential threats and vulnerabilities.</p>
+                <p>Implementing advanced security protocols to safeguard network infrastructure against potential
+                    threats and vulnerabilities.</p>
             </div>
             <div class="service">
                 <h3>System Administration</h3>
@@ -192,7 +150,8 @@
             </div>
             <div class="service">
                 <h3>Database Management</h3>
-                <p>Designing, implementing, and maintaining databases to support efficient data storage and retrieval.</p>
+                <p>Designing, implementing, and maintaining databases to support efficient data storage and
+                    retrieval.</p>
             </div>
             <div class="service">
                 <h3>IT Consulting</h3>
@@ -200,19 +159,23 @@
             </div>
             <div class="service">
                 <h3>Technical Support</h3>
-                <p>Offering assistance with troubleshooting and resolving technical issues for end-users and businesses.</p>
+                <p>Offering assistance with troubleshooting and resolving technical issues for end-users and
+                    businesses.</p>
             </div>
             <div class="service">
                 <h3>Custom Software Development</h3>
-                <p>Developing tailored software solutions to meet specific business needs, using languages like Java, C, C#, and Python.</p>
+                <p>Developing tailored software solutions to meet specific business needs, using languages like Java, C,
+                    C#, and Python.</p>
             </div>
             <div class="service">
                 <h3>System Integration</h3>
-                <p>Integrating various software and hardware components to create cohesive, efficient, and scalable systems.</p>
+                <p>Integrating various software and hardware components to create cohesive, efficient, and scalable
+                    systems.</p>
             </div>
             <div class="service">
                 <h3>Website Design and Development</h3>
-                <p>Creating modern, responsive websites tailored to your business needs, with a focus on usability, performance, and aesthetics.</p>
+                <p>Creating modern, responsive websites tailored to your business needs, with a focus on usability,
+                    performance, and aesthetics.</p>
             </div>
         </div>
     </div>
