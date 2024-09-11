@@ -6,6 +6,29 @@
     margin-top: 20px;
 }
 
+.contact-section {
+    background-color: #383838;
+}
+
+.contact-section h1 {
+    margin-left: 70px;
+    margin-top: 20px;
+    font-size: 48px;
+    color: #fff;
+}
+
+.contact-box {
+    align-items: center;
+    width: 90%;
+    margin-left: 70px;
+    background-color: #4b4b4b;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .form-group {
     margin-bottom: 15px;
 }
@@ -84,6 +107,22 @@
 
 /* Mobile Styles */
 @media (max-width: 480px) {
+    .contact-section h1 {
+        margin: 0;
+        margin-left: 20px;
+        font-size: 1.8rem;
+    }
+
+    .contact-box {
+        margin: 0;
+        margin-left: 20px;
+        width: 90%;
+    }
+
+    .contact-section {
+        padding: 1rem;
+    }
+
     .btn-dark {
         display: block !important;
         visibility: visible !important;
