@@ -123,7 +123,7 @@ body {
 #carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 100%; /* Adjust this to fit all slides in one row */
+    width: 100%;
 }
 
 .carousel-slide {
@@ -151,6 +151,7 @@ body {
 .skill img {
     max-height: 200px;
     max-width: 200px;
+    object-fit: contain; /* Ensure images are not stretched */
     margin-block: auto;
 }
 
@@ -310,7 +311,7 @@ body {
     }
 
     #carousel-slide {
-        width: 100%; /* Ensure it fits one slide at a time */
+        width: calc(100% / 3 - 20px); /* 3 items per row on larger screens */
     }
 
     .skill {
