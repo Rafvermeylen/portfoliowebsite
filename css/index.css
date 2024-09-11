@@ -329,8 +329,8 @@ body {
     }
 
     .skill {
-        width: 100%;
-        margin: 0 0
+        width: 50%;
+        margin-left: 95px;
     }
 
     .skill img {
@@ -352,10 +352,6 @@ body {
 
     #carousel-slide {
         width: 90%; /* Ensure it fits one slide at a time */
-    }
-
-    .skill {
-        width: 90%;
     }
 
     .skill img {
