@@ -1,22 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const carouselSlide = document.querySelector('#carousel-slide');
-    const skillElements = document.querySelectorAll('.skill');
-    let counter = 0;
-    let size = skillElements[0].offsetWidth; // Get initial size
+import EmblaCarousel from 'embla-carousel'
+import { addPrevNextBtnsClickHandlers } from './EmblaCarouselArrowButtons'
+import { addDotBtnsAndClickHandlers } from './EmblaCarouselDotButton'
+import Autoplay from 'embla-carousel-autoplay'
 
-    // Update size on window resize for responsiveness
-    window.addEventListener('resize', () => {
-        size = skillElements[0].offsetWidth;
-    });
+const OPTIONS = { dragFree: true, loop: true }
 
-    function moveCarousel() {
-        counter++;
-        if (counter >= skillElements.length) {
-            counter = 0; // Loop back to the first slide
-        }
-        carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-    }
+const emblaNode = document.querySelector('.embla')
+const viewportNode = emblaNode.querySelector('.embla__viewport')
+const prevBtnNode = emblaNode.querySelector('.embla__button--prev')
+const nextBtnNode = emblaNode.querySelector('.embla__button--next')
+const dotsNode = emblaNode.querySelector('.embla__dots')
 
-    // Automatically move the carousel every 3 seconds
-    setInterval(moveCarousel, 3000);
-});
+const emblaApi = EmblaCarousel(viewportNode, OPTIONS, [Autoplay()])
+
+const onNavButtonClick = (emblaApi) => {
+    const autoplay = emblaApi?.plugins()?.autoplay
+    if (!autoplay) return
+
+    const resetOrStop =
+        autoplay.options.stopOnInteraction === false
+            ? autoplay.reset
+            : autoplay.stop
+
+    resetOrStop()
+}
+
+const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(
+    emblaApi,
+    prevBtnNode,
+    nextBtnNode,
+    onNavButtonClick
+)
+const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(
+    emblaApi,
+    dotsNode,
+    onNavButtonClick
+)
+
+emblaApi.on('destroy', removePrevNextBtnsClickHandlers)
+emblaApi.on('destroy', removeDotBtnsAndClickHandlers)

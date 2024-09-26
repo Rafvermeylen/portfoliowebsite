@@ -1,0 +1,19 @@
+{
+  "name": "portfoliowebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rafvermeylen/portfoliowebsite.git"
+  },
+  "private": true,
+  "dependencies": {
+    "embla-carousel": "8.3.0",
+    "embla-carousel-autoplay": "8.3.0"
+  }
+}
