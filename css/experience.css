@@ -48,10 +48,6 @@ h3 {
     transition: transform 0.3s ease;
 }
 
-.experience-item:hover, .education-item:hover, .certification-item:hover {
-    transform: scale(1.02);
-}
-
 /* List styling */
 ul {
     list-style-type: disc;
