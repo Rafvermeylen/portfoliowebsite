@@ -24,4 +24,4 @@ Contributions, issues, and feature requests are welcome! Feel free to submit an 
 
 ## 👤 Contact
 ### Raf Vermeylen
-[Email](raf.vermeylen1@gmail.com) | [LinkedIn](https://www.linkedin.com/in/raf-vermeylen-5768a1224/)
+[Email](mailto:raf.vermeylen1@gmail.com) | [LinkedIn](https://www.linkedin.com/in/raf-vermeylen-5768a1224/)
